@@ -7,17 +7,17 @@ app = Flask(__name__)
 
 @app.route('/htop')
 def htop():
-    # Get system information
+    
     username = os.getenv("USER") or os.getenv("varunchopra-08") or "codespace-user"
 
 
-    full_name = "Varun Chopra"  # Replace with your full name
+    full_name = "Varun Chopra"  
     ist_time = datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%Y-%m-%d %H:%M:%S %Z')
 
-    # Get the output of the 'top' command
+    
     top_output = os.popen("top -b -n 1").read()
 
-    # Return the result as HTML
+    
     return f"""
     <h1>Name: {full_name}</h1>
     <h2>Username: {username}</h2>
