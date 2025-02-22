@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/htop')
 def htop():
     
-    username = os.getenv("USER") or os.getenv("varunchopra-08") or "codespace-user"
+    username = os.getenv("USER") or os.getenv("USERNAME") or "codespace-user"
 
 
     full_name = "Varun Chopra"  
